@@ -1,0 +1,2 @@
+# logical task name = script engine name|file name|constructor invocation
+mytask=python|mytask.py|MyTask()
