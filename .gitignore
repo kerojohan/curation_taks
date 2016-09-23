@@ -1,0 +1,15 @@
+/*
+!/lib
+/lib/*
+!/lib/Lib
+!/ctscripts/
+!/lib/jython.jar
+!/webapps/
+/webapps/*
+!/webapps/xmlui/
+/webapps/xmlui/*
+!/webapps/xmlui/WEB-INF/
+/webapps/xmlui/WEB-INF/*
+!/webapps/xmlui/WEB-INF/lib/
+/webapps/xmlui/WEB-INF/lib/*
+!/webapps/xmlui/WEB-INF/lib/jython.jar
