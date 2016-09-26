@@ -23,12 +23,9 @@ class DeletingTHUMBNAILS(ScriptedTask):
                                     dso.itemService.removeBundle(Curator.curationContext(),dso,myBundles[0])
                                 if len(myBitstreams)>0:
                                     for k in range(0,len(myBitstreams)):
-                                            print "DELETE "+myBitstreams[k].getName()
+                                            print "DELETE "+myBitstreams[0].getName()
                                             bitstreamService = ContentServiceFactory.getInstance().getBitstreamService()    
-                                            bitstreamService.delete(Curator.curationContext(),myBitstreams[k])
-                                            
-                                       #     print len(myBitstreams)
-                                            #        myBitstreams[k].getBundles().remove(i)
+                                            bitstreamService.delete(Curator.curationContext(),myBitstreams[0])
                                     print "- DELETING BUNDLE"
                                     dso.itemService.removeBundle(Curator.curationContext(),dso,myBundles[0])
                 return 0
