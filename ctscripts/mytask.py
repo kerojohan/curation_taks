@@ -10,27 +10,26 @@ class MyTask(ScriptedTask):
                 print "initializing with Jython"
  
         def performDso(self, dso):
-                print "perform on dso "
+                #print "perform on dso "
                 if dso.getType()==2:
                         print "Item '" + dso.getName() + "' ("+dso.getHandle()+")"
-                        myBundles = dso.itemService.getBundles(dso,"VISOR")
+                        myBundles = dso.itemService.getBundles(dso,"THUMBNAIL")
+                        totalbundles = len(myBundles)
                         for i in myBundles:
                                 myBitstreams = i.getBitstreams()
                                 total = len(myBitstreams)
-                                print "Total of  "+str(total)+" files"
                                 if len(myBitstreams)==0:
-                                    print "ESBORRO BUNDLE"
+                                    print "- DELETING EMPTY BUNDLE"
                                     dso.itemService.removeBundle(Curator.curationContext(),dso,myBundles[0])
                                 if len(myBitstreams)>0:
                                     for k in range(0,len(myBitstreams)):
                                             print "DELETE "+myBitstreams[k].getName()
-                                            bitstreamService = ContentServiceFactory.getInstance().getBitstreamService()
-                                            
+                                            bitstreamService = ContentServiceFactory.getInstance().getBitstreamService()    
                                             bitstreamService.delete(Curator.curationContext(),myBitstreams[k])
                                             
-                                            print len(myBitstreams)
+                                       #     print len(myBitstreams)
                                             #        myBitstreams[k].getBundles().remove(i)
-                                    print "ESBORRO BUNDLE"
+                                    print "- DELETING BUNDLE"
                                     dso.itemService.removeBundle(Curator.curationContext(),dso,myBundles[0])
                 return 0
  
