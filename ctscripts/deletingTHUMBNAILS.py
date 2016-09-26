@@ -5,7 +5,7 @@ from org.dspace.content.factory import ContentServiceFactory
 
 #from org.dspace.content.service import BitstreamService
  
-class MyTask(ScriptedTask):
+class DeletingTHUMBNAILS(ScriptedTask):
         def init(self, curator, taskName):
                 print "initializing with Jython"
  
