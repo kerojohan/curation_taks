@@ -1,2 +1,12 @@
 # logical task name = script engine name|file name|constructor invocation
-deletingTHUMBNAILS=python|deletingTHUMBNAILS.py|DeletingTHUMBNAILS()
+deletingORIGINALS=python|deletingORIGINALS.py|Main()
+deletingTHUMBNAILS=python|deletingTHUMBNAILS.py|Main()
+addmetaowningcol=python|afegir_metadata_amb_owning_collection.py|Main()
+esborrarfitxers_jpgvis=python|esborrar_bundle_nom_vis.py|Main()
+esborrar_bundles_xml_nomediaserver=python|esborrar_bundles_xml_noenmediaserver.py|Main()
+esborrar_imatges_petites=python|esborrar_bundles_imatges_petites.py|Main()
+esborrar_xml_serverantic=python|esborrar_bundles_xml_server_antic.py|Main()
+esborrar_media_docments=python|esborrar_media_docments.py|Main()
+esborrar_thumbs_pdfblancs=python|esborrar_thumbs_pdf_blancs.py|Main()
+checkTHUMBsize=python|checkTHUMBsize.py|Main()
+finditemswithout_type=python|find_items_withnodctype.py|Main()

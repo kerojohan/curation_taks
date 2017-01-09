@@ -7,7 +7,7 @@ import os.path
 import shutil
 #from org.dspace.content.service import BitstreamService
 
-class Enoenmediaserver(ScriptedTask):
+class Main(ScriptedTask):
         def init(self, curator, taskName):
                 print "initializing with Jython"
 

@@ -13,7 +13,7 @@ class Main(ScriptedTask):
                 #print "perform on dso "
                 if dso.getType()==2:
                         print "Item '" + dso.getName() + "' ("+dso.getHandle()+")"
-                        myBundles = dso.itemService.getBundles(dso,"THUMBNAIL")
+                        myBundles = dso.itemService.getBundles(dso,"ORIGINALS")
                         totalbundles = len(myBundles)
                         for i in myBundles:
                                 myBitstreams = i.getBitstreams()
@@ -23,7 +23,10 @@ class Main(ScriptedTask):
                                     dso.itemService.removeBundle(Curator.curationContext(),dso,myBundles[0])
                                 if len(myBitstreams)>0:
                                     for k in range(0,len(myBitstreams)):
-                                            print "DELETE "+myBitstreams[0].getName()
+					    try:	
+                                                print "DELETE "+myBitstreams[0].getName()
+                                            except ValueError:
+                                                print "ERROR" 
                                             bitstreamService = ContentServiceFactory.getInstance().getBitstreamService()    
                                             bitstreamService.delete(Curator.curationContext(),myBitstreams[0])
                                     print "- DELETING BUNDLE"

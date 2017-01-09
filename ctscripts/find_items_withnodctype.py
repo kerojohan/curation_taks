@@ -6,7 +6,7 @@ import subprocess
 
 #from org.dspace.content.service import BitstreamService
 
-class Fnotype(ScriptedTask):
+class Main(ScriptedTask):
         def init(self, curator, taskName):
                 print "initializing with Jython"
 
